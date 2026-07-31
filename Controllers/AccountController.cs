@@ -14,6 +14,11 @@ namespace Vallejos_MidtermProject_BSIT31E2.Controllers
         [HttpPost]
         public IActionResult Login(LoginViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             if (model.Username == "admin" && model.Password == "123456")
             {
                 return RedirectToAction("Welcome");

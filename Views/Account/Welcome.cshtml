@@ -1,2 +1,19 @@
-﻿<h1>Welcome!</h1>
-<p>You have successfully logged in.</p>
+﻿@{
+    ViewData["Title"] = "Welcome";
+}
+
+<div class="login-wrapper">
+    <div class="login-panel">
+        <div class="user-icon">🎉</div>
+        <h2>Welcome!</h2>
+        <p>You have successfully logged in.</p>
+
+        <a asp-controller="Account" asp-action="Login" class="btn-back">
+            Back to Login
+        </a>
+    </div>
+
+    <div class="welcome-panel">
+        <h1>Enjoy your session</h1>
+    </div>
+</div>
